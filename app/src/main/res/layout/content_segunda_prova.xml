@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_segunda_prova" tools:context=".SegundaProva">
+
+    <TextView
+        style="@style/TextView1"
+        />
+    <EditText
+        style="@style/EditText"
+        android:id="@+id/edtUser"/>
+    <TextView
+        style="@style/TextView2"
+        />
+    <EditText
+        style="@style/EditText2"
+        android:id="@+id/edtPass"/>
+    <Button
+        style="@style/ButtonCad"
+        android:id="@+id/btnCadastra"/>
+    <Button
+        style="@style/ButtonList"
+        android:id="@+id/btnLista"/>
+</LinearLayout>

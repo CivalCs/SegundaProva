@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SegundaProva</string>
+    <string name="action_settings">Settings</string>
+    <string name="user">User:</string>
+    <string name="pass">Password:</string>
+    <string name="cadastrar">Register</string>
+    <string name="no">There is no registered user!</string>
+    <string name="listar">list</string>
+    <string name="listaruser">List registered users</string>
+    <string name="erro">It was not possible to register the user!</string>
+    <string name="confirm">User successfully registered!</string>
+</resources>
+

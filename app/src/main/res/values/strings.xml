@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SegundaProva</string>
+    <string name="action_settings">Settings</string>
+    <string name="user">Usuário:</string>
+    <string name="pass">Senha:</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="no">Não há usuário cadastrados!</string>
+    <string name="listar">Listar</string>
+    <string name="listaruser">Listar usuários cadastrados</string>
+    <string name="erro">Não foi possível cadastrar o usuário!</string>
+    <string name="confirm">Usuário cadastrado com sucesso!</string>
+    <string name="title_activity_listar_user">ListarUser</string>
+</resources>
