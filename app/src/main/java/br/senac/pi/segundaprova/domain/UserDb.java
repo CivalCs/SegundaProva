@@ -1,8 +1,13 @@
 package br.senac.pi.segundaprova.domain;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Aluno on 20/11/2015.
@@ -25,16 +30,41 @@ public class UserDb extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){}
 
-    /*
-    private static final String TAG = "sql";
-    //Nome do banco
-    private static final String NOME_BANCO = "cursoandroid.sqlite";
-    private static final int VERSAO_BANCO = 1;
-
-    public CarrosDb(Context context){
-        //context, nome do banco, factory, versão
-        super(context, NOME_BANCO, null, VERSAO_BANCO);
+    public int delete(User usuario){
+        SQLiteDatabase db = getWritableDatabase();
+        try{
+            int count = db.delete("usuario","_id=?",new String[]{String.valueOf(usuario.getId())});
+            Log.i(TAG, "Deletou [" + count + "] registro.");
+            return count;
+        }finally {
+            db.close();
+        }
     }
 
-    @Override*/
+    public List<User> findAll(){
+        SQLiteDatabase db = getWritableDatabase();
+        try{
+            Cursor cursor = db.query("usuario", null, null, null, null, null, null, null);
+            return toList(cursor);
+        }finally {
+            db.close();
+        }
+    }
+
+    public List<User> toList(Cursor cursor){
+        List<User> usuario = new ArrayList<User>();
+        if (cursor.moveToFirst()){
+            do {
+                User user = new User();
+                usuario.add(user);
+
+                user.setId(cursor.getLong(cursor.getColumnIndex("_id")));
+                user.setUsuario(cursor.getString(cursor.getColumnIndex("nome")));
+                user.setPass(cursor.getString(cursor.getColumnIndex("pass")));
+
+            }while (cursor.moveToNext());
+        }
+        return usuario;
+    }
+
 }

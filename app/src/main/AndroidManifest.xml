@@ -23,6 +23,13 @@
             android:label="@string/title_activity_listar_user"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity android:name=".AltUserActivity" >
+        </activity>
+        <activity
+            android:name=".UpdateUserActivity"
+            android:label="@string/title_activity_update_user"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

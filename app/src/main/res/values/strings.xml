@@ -10,4 +10,7 @@
     <string name="erro">Não foi possível cadastrar o usuário!</string>
     <string name="confirm">Usuário cadastrado com sucesso!</string>
     <string name="title_activity_listar_user">ListarUser</string>
+    <string name="title_activity_update_user">UpdateUserActivity</string>
+    <string name="new_username">Novo usuário:</string>
+    <string name="new_pass">Nova senha:</string>
 </resources>

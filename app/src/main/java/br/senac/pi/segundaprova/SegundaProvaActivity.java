@@ -56,8 +56,8 @@ public class SegundaProvaActivity extends AppCompatActivity {
                 String userName = edtUserName.getText().toString();
                 String passUser = edtPassUser.getText().toString();
                 ContentValues values = new ContentValues();
-                values.put("usuario",userName);
-                values.put("senha",passUser);
+                values.put("nome",userName);
+                values.put("pass",passUser);
                 long id = database.insert("usuario",null,values);
                 if (id != 0 ){
                     Toast.makeText(getApplicationContext(),getString(R.string.confirm),Toast.LENGTH_LONG).show();

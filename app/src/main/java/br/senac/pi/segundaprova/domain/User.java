@@ -5,23 +5,23 @@ package br.senac.pi.segundaprova.domain;
  */
 public class User {
     private long id;
-    private String usuario;
+    private String nome;
     private String pass;
 
     public User(){}
 
-    public User(long id, String usuario, String pass){
+    public User(long id, String nome, String pass){
         this.id = id;
-        this.usuario = usuario;
+        this.nome = nome;
         this.pass = pass;
     }
 
     public String getUsuario() {
-        return usuario;
+        return nome;
     }
 
     public void setUsuario(String usuario) {
-        this.usuario = usuario;
+        this.nome = nome;
     }
 
     public String getPass() {
